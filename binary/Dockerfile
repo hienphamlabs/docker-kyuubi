@@ -27,7 +27,7 @@ RUN set -ex \
   && cd $KYUUBI_HOME/externals/spark-${SPARK_VERSION}-bin-hadoop3/jars \
   && export AWS_VERSION=2.41.18 \
   && curl -LO https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-aws/${HADOOP_VERSION}/hadoop-aws-${HADOOP_VERSION}.jar \
-  && curl -Lo awssdk-${AWS_VERSION} https://repo1.maven.org/maven2/software/amazon/awssdk/bundle/${AWS_VERSION}/bundle-${AWS_VERSION}.jar
+  && curl -Lo awssdk-${AWS_VERSION}.jar https://repo1.maven.org/maven2/software/amazon/awssdk/bundle/${AWS_VERSION}/bundle-${AWS_VERSION}.jar
 
 RUN cd $KYUUBI_HOME/externals/engines/jdbc \
   && curl -LO https://repo1.maven.org/maven2/com/mysql/mysql-connector-j/9.6.0/mysql-connector-j-9.6.0.jar \
